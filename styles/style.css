@@ -18,9 +18,11 @@ body {
 .col-1 { width: 10%; }
 .col-2 { width: 20%; }
 .col-3 { width: 30%; }
+.col-3-33 { width: 33.3%; }
 .col-4 { width: 40%; }
 .col-5 { width: 50%; }
 .col-6 { width: 60%; }
+.col-6-66 { width: 66.6%; }
 .col-7 { width: 70%; }
 .col-8 { width: 80%; }
 .col-9 { width: 90%; }
@@ -29,9 +31,11 @@ body {
 .offset-1 { margin-left: 10%; }
 .offset-2 { margin-left: 20%; }
 .offset-3 { margin-left: 30%; }
+.offset-3-33 { margin-left: 33.3%; }
 .offset-4 { margin-left: 40%; }
 .offset-5 { margin-left: 50%; }
 .offset-6 { margin-left: 60%; }
+.offset-6-66 { margin-left: 66.6%; }
 .offset-7 { margin-left: 70%; }
 .offset-8 { margin-left: 80%; }
 .offset-9 { margin-left: 90%; }
@@ -39,6 +43,7 @@ body {
 
 [class^="col-"] {
 	float: left;
+	padding: 10px;
 }
 #top {
 	position: fixed;
@@ -167,6 +172,29 @@ body {
 	font-size: 22px;
 	box-shadow: 0px 0px 10px rgba(0,0,0,.8);
 }
+a.button {
+	background: #3a7cec;
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	padding: 13px;
+	border-radius: 8px;
+	font-weight: bold;
+	text-transform: uppercase;
+	box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+	-webkit-transition: all .4s ease-in-out; 
+	-moz-transition: all .4s ease-in-out; 
+	-ms-transition: all .4s ease-in-out; 
+	-o-transition: all .4s ease-in-out; 
+	transition: all .4s ease-in-out;
+}
+a.button:hover {
+	box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+}
+a.button.block {
+	display: block;
+	text-align: center;
+}
 .embed {
 	width: 600px;
 	height: 338px;
@@ -215,6 +243,7 @@ body {
 	line-height: 170%;
 	font-size: 14px;
 	padding: 30px 20px;
+	overflow: hidden;
 	padding-bottom: 50px;
 	position: relative;
 }
