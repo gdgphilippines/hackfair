@@ -49,6 +49,14 @@ a {
 	float: left;
 	padding: 10px;
 }
+a.social {
+	vertical-align: middle;
+	display: inline-block;
+	margin: 0px 10px;
+}
+a.social img {
+	width: 20px;
+}
 #top {
 	position: fixed;
 	box-shadow: 0px 0px 30px rgba(0,0,0,.2);
