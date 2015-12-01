@@ -185,9 +185,9 @@ a.social img {
 	box-shadow: 0px 0px 10px rgba(0,0,0,.8);
 }
 a.button {
-	background: #3a7cec;
+	background: #bbb;
+	color: rgba(255,255,255,.8);
 	display: inline-block;
-	color: white;
 	text-decoration: none;
 	padding: 13px;
 	border-radius: 8px;
@@ -199,6 +199,11 @@ a.button {
 	-ms-transition: all .4s ease-in-out; 
 	-o-transition: all .4s ease-in-out; 
 	transition: all .4s ease-in-out;
+	cursor: pointer;
+}
+a.button[href], a.button[id], a.button[onclick] {
+	background: #3a7cec;
+	color: white;
 }
 a.button:hover {
 	box-shadow: 0px 0px 10px rgba(0,0,0,.5);
