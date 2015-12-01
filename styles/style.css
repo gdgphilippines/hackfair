@@ -155,7 +155,7 @@ a.social img {
 	padding: 0px 30px;
 	width: 100%;
 	margin: 0px auto;
-	margin-top: 190px;
+	margin-top: 100px;
 	text-align: center;
 	font-size: 70px;
 	color: #087cec;
@@ -520,10 +520,12 @@ a.button.block {
 	}
 	#container .banner .title {
 		font-size: 25px;
-		margin-top: 100px;
+		margin-top: 70px;
 	}
 	#container .banner .button {
 		margin-top: 30px;
+		font-size: 15px;
+		padding: 15px;
 	}
 	#googleMap {
 		height: 250px !important;
