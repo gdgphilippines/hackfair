@@ -264,7 +264,7 @@ a.button.block {
 	padding-bottom: 50px;
 	position: relative;
 }
-#container #googleMap {
+#googleMap, #googleMap1 {
 	width: 100%;
 	height: 400px;
 }
@@ -485,12 +485,10 @@ a.button.block {
 	background-position: center center;
 	background-repeat: no-repeat;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 780px) {
 	[class^="col-"] {
 		width: 100% !important;
 	}
-}
-@media screen and (max-width: 780px) {
 	#top #menu {
 		display: block;
 	}
@@ -537,7 +535,7 @@ a.button.block {
 		font-size: 15px;
 		padding: 15px;
 	}
-	#googleMap {
+	#googleMap, #googleMap1 {
 		height: 250px !important;
 	}
 	#slider .nav li a.red {
