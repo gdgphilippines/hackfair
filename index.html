@@ -130,12 +130,42 @@
 			</div>
 		</div>
 	</div>
-	<div class="content red" name="contact">
+	<div class="content red">
 		<div class="title">
-			<div class="wrapper">Contact</div>
+			<div class="wrapper">FAQs</div>
 		</div>
 		<div class="wire upper-right"></div>
 		<div class="wire lower-left"></div>
+		<div class="wrapper">
+			<div class="faqs-list col-6 offset-2">
+				<div class="q"><a class="expand"></a>Question 1</div>
+				<div class="a">Answer here</div>
+			</div>
+			<div class="faqs-list col-6 offset-2">
+				<div class="q"><a class="expand"></a>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem assumenda error, maiores eum! Sit, asperiores!</div>
+				<div class="a">Answer here</div>
+			</div>
+		</div>
+		<script>
+		$(document).ready(function() {
+			$(".faqs-list .q").click(function() {
+				if($(this).children(".expand").hasClass("open")) {
+					$(this).children(".expand").removeClass("open");
+					$(this).siblings(".a").hide();
+				} else {
+					$(this).children(".expand").addClass("open");
+					$(this).siblings(".a").show();
+				}
+			});
+		})
+		</script>
+	</div>
+	<div class="content blue" name="contact">
+		<div class="title">
+			<div class="wrapper">Contact</div>
+		</div>
+		<div class="wire upper-left"></div>
+		<div class="wire lower-right"></div>
 		<div class="wrapper">
 			You may contact GDG Philippines by emailing us at <a href="mailto:gdgphilippines@gmail.com">gdgphilippines@gmail.com</a>
 		</div>

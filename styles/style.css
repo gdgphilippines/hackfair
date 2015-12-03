@@ -485,6 +485,44 @@ a.button.block {
 	background-position: center center;
 	background-repeat: no-repeat;
 }
+.faqs-list {
+	background: white;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+	margin-bottom: 25px;
+	position: relative;
+}
+.faqs-list .q {
+	float: left;
+	width: 100%;
+	cursor: pointer;
+	padding: 10px;
+	background: rgba(0,0,0,.02);
+}
+.faqs-list .q .expand {
+	width: 24px;
+	cursor: pointer;
+	margin-right: 10px;
+	height: 24px;
+	display: inline-block;
+	vertical-align: middle;
+	background-image: url(../images/ic_right_black.png);
+	background-position: center center;
+	background-size: contain;
+	background-repeat:  no-repeat;
+}
+.faqs-list .q .expand.open {
+	transform: rotate(90deg);
+}
+.faqs-list .a {
+	float: left;
+	width: 100%;
+	padding: 10px 15px;
+	position: relative; 
+	word-wrap: break-word;
+	display: none;
+}
 @media screen and (max-width: 780px) {
 	[class^="col-"] {
 		width: 100% !important;
