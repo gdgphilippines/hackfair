@@ -469,6 +469,21 @@ a.button.block {
 #slider .nav li a.green:hover {
 	border-left: 15px solid #4ab165;
 }
+#slider .nav li a.fullcolor {
+	color: white;
+}
+#slider .nav li a.fullcolor.red {
+	background: #e33e2b;
+}
+#slider .nav li a.fullcolor.blue {
+	background: #3a7cec;
+}
+#slider .nav li a.fullcolor.yellow {
+	background: #fbcc45;
+}
+#slider .nav li a.fullcolor.green {
+	background: #4ab165;
+}
 .calendar {
 	display: inline-block;
 	width: 48px;
@@ -549,12 +564,6 @@ a.button.block {
 		width: 100%;
 		margin-left: 0%;
 	}
-	#top #menu {
-		display: block;
-	}
-	#top .nav {
-		display: none;
-	}
 	#container .banner {
 		height: 300px;
 	}
@@ -568,7 +577,14 @@ a.button.block {
 		padding: 15px;
 	}
 }
-
+@media screen and (max-width: 920px) {
+	#top #menu {
+		display: block;
+	}
+	#top .nav {
+		display: none;
+	}
+}
 @media only screen and (max-device-width: 480px) {
 	.embed {
 		width: 100%;
