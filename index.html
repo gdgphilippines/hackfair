@@ -208,15 +208,15 @@
 				<div class="a">No, there are no limits to the number of entries. You can submit more than one entry.</div>
 			</div>
 			<div class="faqs-list col-6 offset-2">
-				<div class="q blue"><a class="expand"></a>What is the criteria for selection?</div>
+				<div class="q yellow"><a class="expand"></a>What is the criteria for selection?</div>
 				<div class="a">A screening committee will be reviewing the projects. Criteria includes usefulness of the app and Google technologies used.</div>
 			</div>
 			<div class="faqs-list col-6 offset-2">
-				<div class="q blue"><a class="expand"></a>Once selected, do I need to attend both days (December 19 and 20)?</div>
+				<div class="q green"><a class="expand"></a>Once selected, do I need to attend both days (December 19 and 20)?</div>
 				<div class="a">No but it is better if there will be at least one person per day from your team so you can showcase your project to most attendees.</div>
 			</div>
 			<div class="faqs-list col-6 offset-2">
-				<div class="q yellow"><a class="expand"></a>Where can I learn how to develop my ideas?</div>
+				<div class="q red"><a class="expand"></a>Where can I learn how to develop my ideas?</div>
 				<div class="a">To help you in your projects, GDG Philippines will be hosting HackTime events.<br><br>
 				There will be talks about different Google technologies and time for hands-on development.<br><br>
 				In Manila, our HackTime will be on December 5 at Globe Corporate Showroom, Valero Street, Makati City. <br><br>
@@ -231,6 +231,11 @@
 					$(this).siblings(".a").hide();
 					$(this).removeClass("color");
 				} else {
+					$(".faqs-list").each(function() {
+						$(this).find(".expand").removeClass("open");
+						$(this).find(".a").hide();
+						$(this).find(".q").removeClass("color");
+					})
 					$(this).children(".expand").addClass("open");
 					$(this).siblings(".a").show();
 					$(this).addClass("color");
