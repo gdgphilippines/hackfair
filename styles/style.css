@@ -500,6 +500,21 @@ a.button.block {
 	padding: 10px;
 	background: rgba(0,0,0,.02);
 }
+.faqs-list .q.color {
+	color: white;
+}
+.faqs-list .q.color.red {
+	background: #e33e2b;
+}
+.faqs-list .q.color.blue {
+	background: #3a7cec;
+}
+.faqs-list .q.color.yellow {
+	background: #fbcc45;
+}
+.faqs-list .q.color.green {
+	background: #4ab165;
+}
 .faqs-list .q .expand {
 	width: 24px;
 	cursor: pointer;

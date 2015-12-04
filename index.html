@@ -137,13 +137,82 @@
 		<div class="wire upper-right"></div>
 		<div class="wire lower-left"></div>
 		<div class="wrapper">
-			<div class="faqs-list col-6 offset-2">
-				<div class="q"><a class="expand"></a>Question 1</div>
-				<div class="a">Answer here</div>
+			<div class="col-6 offset-2">
+				<h3>General Questions</h3>
 			</div>
 			<div class="faqs-list col-6 offset-2">
-				<div class="q"><a class="expand"></a>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem assumenda error, maiores eum! Sit, asperiores!</div>
-				<div class="a">Answer here</div>
+				<div class="q red"><a class="expand"></a>When and where is HackFair going to be?</div>
+				<div class="a">HackFair is going to be on December 19-20 at the Mind Museum, Bonifacio Global City.</div>
+			</div>
+			<div class="faqs-list col-6 offset-2">
+				<div class="q blue"><a class="expand"></a>Is HackFair a competition?</div>
+				<div class="a">No, HackFair is not a competition. It is a two-day event where thirty selected apps/website/IoT that were created using Google Technologies are given the opportunity to be featured.</div>
+			</div>
+			<div class="faqs-list col-6 offset-2">
+				<div class="q yellow"><a class="expand"></a>How do I feature my app/website/IoT at the HackFair?</div>
+				<div class="a">Apply at <a href="http://hackfair.gdgph.org/">http://hackfair.gdgph.org/</a><br><br>Deadline is on or before 11:59pm December 12, 2015.</div>
+			</div>
+			<div class="faqs-list col-6 offset-2">
+				<div class="q green"><a class="expand"></a>Can I join HackFair without applying as one of the exhibitors?</div>
+				<div class="a">Yes! Register here: <a href="http://hackfair.gdgph.org/">http://hackfair.gdgph.org/</a></div>
+			</div>
+			<div class="faqs-list col-6 offset-2">
+				<div class="q red"><a class="expand"></a>What are the perks of being selected as one of the thirty to showcase idea at Google HackFair?</div>
+				<div class="a">As one of the selected thirty, you get to have a special space to exhibit your idea on both December 19 and 20. Not only that, you will also get to interact with people from the GDG community and the tech community. Apply now! <a href="http://hackfair.gdgph.org/">http://hackfair.gdgph.org/</a></div>
+			</div>
+			<div class="col-6 offset-2">
+				<h3>Application Related Questions</h3>
+			</div>
+			<div class="faqs-list col-6 offset-2">
+				<div class="q blue"><a class="expand"></a>What Google technologies must be used in order to qualify for application?</div>
+				<div class="a">Listed below but not limited to:<br>
+				<ul>
+					<li>Android</li>
+					<li>Android Wear</li>
+					<li>AngularJS</li>
+					<li>Brillo/Weave</li>
+					<li>Cardboard</li>
+					<li>Chrome/HTML5/Polymer</li>
+					<li>Dart Lang</li>
+					<li>Eddystone</li>
+					<li>Firebase</li>
+					<li>Google Analytics</li>
+					<li>Google App Engine</li>
+					<li>Google Compute Engine</li>
+					<li>Google Maps</li>
+				</ul>
+				<i>At least one Google Technology per application</i></div>
+			</div>
+			<div class="faqs-list col-6 offset-2">
+				<div class="q yellow"><a class="expand"></a>Can I join as an individual?</div>
+				<div class="a">Yes, you can apply as an individual.</div>
+			</div>
+			<div class="faqs-list col-6 offset-2">
+				<div class="q green"><a class="expand"></a>Is there an age limit?</div>
+				<div class="a">There is no age limit.</div>
+			</div>
+			<div class="faqs-list col-6 offset-2">
+				<div class="q red"><a class="expand"></a>What are the categories for the app entries?</div>
+				<div class="a">Listed below but not limited to:<br>
+				<ul>
+					<li>Health</li>
+					<li>Productivity</li>
+					<li>Social Impact</li>
+					<li>Music</li>
+					<li>Arts and Culture</li>
+				</ul>
+				</div>
+			</div>
+			<div class="faqs-list col-6 offset-2">
+				<div class="q blue"><a class="expand"></a>Is there a limit to the number of app entries?</div>
+				<div class="a">No, there are no limits to the number of entries. You can submit more than one entry.</div>
+			</div>
+			<div class="faqs-list col-6 offset-2">
+				<div class="q yellow"><a class="expand"></a>Where can I learn how to develop my ideas?</div>
+				<div class="a">To help you in your projects, GDG Philippines will be hosting HackTime events.<br><br>
+				There will be talks about different Google technologies and time for hands-on development.<br><br>
+				In Manila, our HackTime will be on December 5 at Globe Corporate Showroom, Valero Street, Makati City. <br><br>
+				Register for HackTime by clicking "HackTime registration": <a href="http://hackfair.gdgph.org/">http://hackfair.gdgph.org/</a></div>
 			</div>
 		</div>
 		<script>
@@ -152,9 +221,11 @@
 				if($(this).children(".expand").hasClass("open")) {
 					$(this).children(".expand").removeClass("open");
 					$(this).siblings(".a").hide();
+					$(this).removeClass("color");
 				} else {
 					$(this).children(".expand").addClass("open");
 					$(this).siblings(".a").show();
+					$(this).addClass("color");
 				}
 			});
 		})
