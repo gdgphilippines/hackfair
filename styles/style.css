@@ -527,6 +527,13 @@ a.button.block {
 	[class^="col-"] {
 		width: 100% !important;
 	}
+	[class^="offset-"] {
+		margin: 0% !important;
+	}
+	.faqs-list {
+		width: 100%;
+		margin-left: 0%;
+	}
 	#top #menu {
 		display: block;
 	}
