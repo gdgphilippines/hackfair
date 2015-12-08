@@ -155,13 +155,20 @@ a.social img {
 	padding: 0px 30px;
 	width: 100%;
 	margin: 0px auto;
-	margin-top: 100px;
+	margin-top: 60px;
 	text-align: center;
-	font-size: 70px;
 	color: #087cec;
 	font-weight: 900;
 	text-transform: uppercase;
 	text-shadow: 0px 0px 15px rgba(255,255,255,1);
+}
+.banner .title span.big {
+	font-size: 90px;
+	margin-bottom: 30px;
+}
+.banner .title span.small {
+	font-size: 20px;
+	margin-bottom: 30px;
 }
 .banner .button {
 	font-size: 20px;
@@ -170,6 +177,7 @@ a.social img {
 	display: inline-block;
 	background: #087cec;
 	padding: 20px;
+	margin-top: 30px;
 	border-radius: 7px;
 	box-shadow: 0px 0px 10px rgba(0,0,0,.4);
 	text-shadow: 0px 0px 15px rgba(255,255,255,.1);
@@ -568,11 +576,16 @@ a.button.block {
 		height: 300px;
 	}
 	#container .banner .title {
-		font-size: 25px;
-		margin-top: 70px;
+		margin-top: 40px;
+	}
+	#container .banner .title span.big {
+		font-size: 40px;
+	}
+	#container .banner .title span.small {
+		font-size: 15px;
 	}
 	#container .banner .button {
-		margin-top: 30px;
+		margin-top: 20px;
 		font-size: 15px;
 		padding: 15px;
 	}
@@ -604,10 +617,10 @@ a.button.block {
 	}
 	#container .banner .title {
 		font-size: 25px;
-		margin-top: 70px;
+		margin-top: 50px;
 	}
 	#container .banner .button {
-		margin-top: 30px;
+		margin-top: 20px;
 		font-size: 15px;
 		padding: 15px;
 	}
