@@ -315,14 +315,13 @@ function initializeClock(id, endtime){
 	var clock = document.getElementById(id);
 	var timeinterval = setInterval(function(){
 		var t = getTimeRemaining(endtime);
-		t.hours = t.hours + (t.days*24);
 		if(t.minutes < 10) {
 			t.minutes = "0" + t.minutes;
 		}
 		if(t.seconds < 10) {
 			t.seconds = "0" + t.seconds;
 		}
-	    clock.innerHTML = t.hours + ':' + t.minutes + ':' + t.seconds;
+	    clock.innerHTML = t.days + 'd :' + t.hours + 'h : ' + t.minutes + 'm : ' + t.seconds+'s';
 		if(t.total<=0){
 			clearInterval(timeinterval);
 		}
