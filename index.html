@@ -33,7 +33,7 @@
 </div>
 <div id="container">
 	<div class="banner home">
-		<div class="title"><span class="big" id="lblTime"></span><br><span class="small">Until project submission</span><br><a href="http://goo.gl/forms/ClRpbN434x" target="_blank" class="button">Submit your project Now</a><br /><a href="#attend" target="_blank" class="button">Attend HackFair</a></div>
+		<div class="title"><a href="http://goo.gl/forms/ClRpbN434x" target="_blank" class="button">Submit your project Now</a><br /><a href="#attend" target="_blank" class="button">Attend HackFair</a></div>
 	</div>
 	<div class="content red" name="about">
 		<div class="title">
@@ -296,7 +296,6 @@
 	</div>
 </div>
 <script>
-var deadline = 'December 12 2015 23:59:59 GMT+08:00';
 function getTimeRemaining(endtime){
 	var t = Date.parse(endtime) - Date.parse(new Date());
 	var seconds = Math.floor( (t/1000) % 60 );
@@ -311,25 +310,6 @@ function getTimeRemaining(endtime){
 		'seconds': seconds
 	};
 }
-function initializeClock(id, endtime){
-	var clock = document.getElementById(id);
-	var timeinterval = setInterval(function(){
-		var t = getTimeRemaining(endtime);
-		if(t.minutes < 10) {
-			t.minutes = "0" + t.minutes;
-		}
-		if(t.seconds < 10) {
-			t.seconds = "0" + t.seconds;
-		}
-	    clock.innerHTML = (t.days > 0 ? t.days + 'd :' : "")  + (t.hours > 0 ? t.hours + 'h :' : "") + t.minutes + 'm : ' + t.seconds+'s';
-		if(t.total<=0){
-			clearInterval(timeinterval);
-		}
-	},1000);
-}
-initializeClock('lblTime', deadline);
-
-
 function isMobile() {
 	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
