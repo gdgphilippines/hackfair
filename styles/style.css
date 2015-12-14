@@ -566,6 +566,7 @@ a.button.block {
 @media screen and (max-width: 780px) {
 	[class^="col-"] {
 		width: 100% !important;
+		margin-left: 0%;
 	}
 	[class^="offset-"] {
 		margin: 0% !important;
@@ -573,9 +574,6 @@ a.button.block {
 	.faqs-list {
 		width: 100%;
 		margin-left: 0%;
-	}
-	#container .banner {
-		height: 300px;
 	}
 	#container .banner .title {
 		margin-top: 40px;
@@ -607,15 +605,13 @@ a.button.block {
 	}
 	[class^="col-"] {
 		width: 100%;
+		margin-left: 0%;
 	}
 	#top #menu {
 		display: block;
 	}
 	#top .nav {
 		display: none;
-	}
-	#container .banner {
-		height: 300px;
 	}
 	#container .banner .title {
 		font-size: 25px;
