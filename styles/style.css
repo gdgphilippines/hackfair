@@ -563,6 +563,10 @@ a.button.block {
 	word-wrap: break-word;
 	display: none;
 }
+.sponsors {
+	margin: 20px;
+	vertical-align: middle;
+}
 @media screen and (max-width: 780px) {
 	[class^="col-"] {
 		width: 100% !important;

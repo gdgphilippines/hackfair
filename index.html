@@ -33,7 +33,7 @@
 </div>
 <div id="container">
 	<div class="banner home">
-		<div class="title"><span class="big">JOIN US</span><br /><span class="small">1st HackFair in the Philippines and GDG PH year end event.</span><br><br><br>
+		<div class="title"><span class="big" id="lblDeadline">JOIN US</span><br /><span class="small">1st HackFair in the Philippines and GDG PH year end event.</span><br><br><br>
 		<div class="col-6 offset-2">
 		<div class="col-3-33 center"><img src="images/bulb.png"><br>Top 30 ideas</div>
 		<div class="col-3-33 center"><img src="images/users.png"><br>Exciting speakers</div>
@@ -69,7 +69,16 @@
 		<div class="wrapper">
 			Day 1 (December 19): All-day project exhibit + talks from invited speakers<br />
 			Day 2 (December 20): All-day project exhibit + talks from exhibitors<br /><br />
-			We will be updating the list of talks in the next few days.
+			We will be updating the list of talks in the next few days.<br><br>
+			<div class="col-5"><a id="btnDay1" class="button block">Day 1 Agenda</a></div>
+			<div class="col-5"><a id="btnDay2" class="button block">Day 2 Agenda</a></div>
+			<div class="col-10" id="tblAgenda">
+				<table class="agenda">
+					<tr>
+						<td>7:00 - 8:00</td>
+					</tr>
+				</table>
+			</div>
 		</div>
 	</div>
 	<div class="content yellow" name="hacktime">
@@ -269,6 +278,14 @@
 	<div class="wrapper">
 		<div class="col-10">
 			<center>
+			<img src="images/sponsors/anc.png" class="sponsors">
+			<img src="images/sponsors/inquirer.png" class="sponsors">
+			<img src="images/sponsors/rappler.png" class="sponsors">
+			<img src="images/sponsors/aktivshow.png" class="sponsors">
+			<img src="images/sponsors/1digimedia.png" class="sponsors">
+			
+
+			<br><br>
 			<a href="http://developers.google.com"><img src="images/googledev.png" height="18px" style="margin: 15px;"></a>
 			<a href="http://gdgph.org"><img src="images/gdgph.png" height="24px" style="margin: 15px;"></a>
 			</center><br>
@@ -312,6 +329,37 @@ $(window).resize(function() {
 	});
 	$("#blackTrans").hide("slow");
 });
+var deadline = 'December 18 2015 12:00:00 GMT+08:00';
+function getTimeRemaining(endtime){
+  var t = Date.parse(endtime) - Date.now();
+  var seconds = Math.floor( (t/1000) % 60 );
+  var minutes = Math.floor( (t/1000/60) % 60 );
+  var hours = Math.floor( (t/(1000*60*60)) % 24 );
+  var days = Math.floor( t/(1000*60*60*24) );
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+function initializeClock(id, endtime){
+  var clock = document.getElementById(id);
+  var timeinterval = setInterval(function(){
+    var t = getTimeRemaining(endtime);
+    t.hours = t.hours + (t.days*24);
+    if(t.minutes < 10)
+    	t.minutes = "0" + t.minutes;
+    if(t.seconds < 10)
+    	t.seconds = "0" + t.seconds;
+    clock.innerHTML = t.hours + " : " + t.minutes + " : " + t.seconds;
+    if(t.total<=0){
+      clearInterval(timeinterval);
+    }
+  },1000);
+}	
+initializeClock('lblDeadline', deadline);
 $(document).ready(function() {
 	$("#slider .nav").height($(window).height()-$("#slider .action").outerHeight()-$("#slider .copy").outerHeight());
 	$("#container").css({
@@ -343,6 +391,28 @@ $(document).ready(function() {
 			"left": "-300px"
 		});
 		$("#blackTrans").hide("slow");
+	});
+	$("#btnDay1").click(function() {
+		$.ajax({
+			type: "post",
+			cache: true,
+			url: "agenda.php",
+			data: {day: 1},
+			success: function(html) {
+				$("#tblAgenda").html(html);
+			}
+		})
+	})
+	$("#btnDay2").click(function() {
+		$.ajax({
+			type: "post",
+			cache: true,
+			url: "agenda.php",
+			data: {day: 2},
+			success: function(html) {
+				$("#tblAgenda").html(html);
+			}
+		})
 	})
 })
 </script>
