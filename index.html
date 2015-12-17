@@ -294,6 +294,9 @@
 	</div>
 </div>
 <div id="blackTrans"></div>
+<div id="speaker_info">
+	
+</div>
 <div id="slider">
 	<div class="action">
 		<a id="btnCloseSlider"></a>
@@ -372,7 +375,10 @@ $(document).ready(function() {
 		$("#slider").css({
 			"left": "-300px"
 		});
-		$("#blackTrans").hide("slow");
+		$("#blackTrans").hide();
+		$("#speaker_info").css({
+			"bottom": "-"+$(this).height()-10+"px"
+		})
 	});
 	$("#btnCloseSlider").click(function() {
 		$("#slider").css({
@@ -403,7 +409,20 @@ $(document).ready(function() {
 		});
 	})
 	$("#btnDay1").click();
+
+
+	$("#speaker_info").css({
+		"bottom": "-"+$(this).height()+"px"
+	});
 })
+function showSpeaker($speaker) {
+	$("#blackTrans").show();
+	$("#speaker_info").load("speakers/"+$speaker+".html", function() {
+		$("#speaker_info").css({
+		"bottom": "0px"
+		})
+	})
+}
 </script>
 </body>
 </html>

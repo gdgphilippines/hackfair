@@ -587,6 +587,14 @@ table.agenda {
 	overflow: hidden;
 	box-shadow: 0px 0px 20px rgba(0,0,0,.1);
 }
+table.agenda img {
+	width: 30px;
+	border-radius: 100%;
+	vertical-align: middle;
+	display: inline-block;
+	margin-left: 10px;
+}
+
 table.agenda td {
 	padding: 20px;
 }
@@ -611,8 +619,46 @@ table.agenda tr:nth-child(4n+1):hover td {
 	background: #4ab165;
 }
 
-
-
+#speaker_info {
+	position: fixed;
+	width: 360px;
+	height: 80%;
+	background: white;
+	bottom: -1000px;
+	box-shadow: 0px 0px 20px rgba(0,0,0,.5);
+	left: 50%;
+	border-radius: 15px 15px 0px 0px;
+	margin-left: -180px;
+	padding: 20px;
+	overflow-y: scroll;
+	z-index: 101;
+	transition: all 1s ease-in-out;
+}
+#speaker_info::-webkit-scrollbar {
+	width: 0px;
+}
+#speaker_info h2 {
+	margin: 0px;
+	padding: 0px;
+	color: #3a7cec;
+	text-align: center;
+}
+#speaker_info img {
+	width: 60%;
+	margin: 20px auto;
+	display: block;
+	position: static;
+	box-shadow: 0px 0px 10px rgba(0,0,0,.3);
+	border-radius: 100%;
+	border: 5px solid #3a7cec;
+}
+#speaker_info p {
+	font-size: 14px;
+	line-height: 150%;
+}
+a.speaker {
+	margin-right: 10px;
+}
 @media screen and (max-width: 780px) {
 	[class^="col-"] {
 		width: 100% !important;
