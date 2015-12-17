@@ -567,6 +567,51 @@ a.button.block {
 	margin: 20px;
 	vertical-align: middle;
 }
+
+a.button.agenda {
+	background: white;
+	color: #bbb;
+}
+a.button.agenda.selected {
+	background: #3a7cec;
+	color: white;
+}
+
+table.agenda {
+	width: 100%;
+	border-collapse: collapse;
+	background: rgba(255,255,255,.4);
+	border-radius: 15px;
+	font-size: 16px;
+	cursor: pointer;
+	overflow: hidden;
+}
+table.agenda td {
+	padding: 20px;
+}
+table.agenda tr td:first-child {
+	color: #3a7cec;
+	font-weight: bold;
+	min-width: 150px;
+}
+table.agenda tr:hover td {
+	color: white;
+}
+table.agenda tr:nth-child(4n+4):hover td {
+	background: #e33e2b;
+}
+table.agenda tr:nth-child(4n+3):hover td {
+	background: #3a7cec;
+}
+table.agenda tr:nth-child(4n+2):hover td {
+	background: #fbcc45;
+}
+table.agenda tr:nth-child(4n+1):hover td {
+	background: #4ab165;
+}
+
+
+
 @media screen and (max-width: 780px) {
 	[class^="col-"] {
 		width: 100% !important;

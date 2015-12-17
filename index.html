@@ -67,17 +67,10 @@
 		<div class="wire upper-left"></div>
 		<div class="wire lower-right"></div>
 		<div class="wrapper">
-			Day 1 (December 19): All-day project exhibit + talks from invited speakers<br />
-			Day 2 (December 20): All-day project exhibit + talks from exhibitors<br /><br />
-			We will be updating the list of talks in the next few days.<br><br>
-			<div class="col-5"><a id="btnDay1" class="button block">Day 1 Agenda</a></div>
-			<div class="col-5"><a id="btnDay2" class="button block">Day 2 Agenda</a></div>
+			<div class="col-5"><a id="btnDay1" class="button block agenda">Day 1 Agenda</a></div>
+			<div class="col-5"><a id="btnDay2" class="button block agenda">Day 2 Agenda</a></div>
 			<div class="col-10" id="tblAgenda">
-				<table class="agenda">
-					<tr>
-						<td>7:00 - 8:00</td>
-					</tr>
-				</table>
+				
 			</div>
 		</div>
 	</div>
@@ -394,6 +387,8 @@ $(document).ready(function() {
 		$("#blackTrans").hide("slow");
 	});
 	$("#btnDay1").click(function() {
+		$(this).addClass("selected");
+		$("#btnDay2").removeClass("selected");
 		$.ajax({
 			type: "post",
 			cache: true,
@@ -405,6 +400,8 @@ $(document).ready(function() {
 		})
 	})
 	$("#btnDay2").click(function() {
+		$(this).addClass("selected");
+		$("#btnDay1").removeClass("selected");
 		$.ajax({
 			type: "post",
 			cache: true,
@@ -415,6 +412,7 @@ $(document).ready(function() {
 			}
 		})
 	})
+	$("#btnDay1").click();
 })
 </script>
 </body>
