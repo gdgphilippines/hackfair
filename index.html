@@ -389,28 +389,18 @@ $(document).ready(function() {
 	$("#btnDay1").click(function() {
 		$(this).addClass("selected");
 		$("#btnDay2").removeClass("selected");
-		$.ajax({
-			type: "post",
-			cache: true,
-			url: "day1.html",
-			data: {day: 1},
-			success: function(html) {
-				$("#tblAgenda").html(html);
-			}
-		})
+		$("#tblAgenda").load("day1.html", function(response, status, xhr) {
+			if(status == "error")
+				alert(xhr.status + " " + xhr.statusText);
+		});
 	})
 	$("#btnDay2").click(function() {
 		$(this).addClass("selected");
 		$("#btnDay1").removeClass("selected");
-		$.ajax({
-			type: "post",
-			cache: true,
-			url: "day2.html",
-			data: {day: 2},
-			success: function(html) {
-				$("#tblAgenda").html(html);
-			}
-		})
+		$("#tblAgenda").load("day2.html", function(response, status, xhr) {
+			if(status == "error")
+				alert(xhr.status + " " + xhr.statusText);
+		});
 	})
 	$("#btnDay1").click();
 })
