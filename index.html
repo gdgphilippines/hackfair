@@ -325,6 +325,9 @@ $(window).resize(function() {
 		"left": "-300px"
 	});
 	$("#blackTrans").hide("slow");
+	$("#speaker_info").css({
+		"bottom": "-"+$(this).height()-10+"px"
+	})
 });
 var deadline = 'December 18 2015 12:00:00 GMT+08:00';
 function getTimeRemaining(endtime){
